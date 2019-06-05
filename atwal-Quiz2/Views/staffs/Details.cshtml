@@ -1,0 +1,34 @@
+﻿@model atwal_Quiz2.Models.staff
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>staff</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.staffName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.staffName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.carReg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.carReg)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.staffNo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

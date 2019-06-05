@@ -1,0 +1,39 @@
+﻿@model IEnumerable<atwal_Quiz2.Models.staff>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Staffs</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.staffName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.carReg)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.staffName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.carReg)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.staffNo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.staffNo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.staffNo })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="properties">
+      <EntityTypeMapping TypeName="Model.property">
+        <MappingFragment StoreEntitySet="property">
+          <ScalarProperty Name="propNo" ColumnName="propNo" />
+          <ScalarProperty Name="propName" ColumnName="propName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="staffs">
+      <EntityTypeMapping TypeName="Model.staff">
+        <MappingFragment StoreEntitySet="staff">
+          <ScalarProperty Name="staffNo" ColumnName="staffNo" />
+          <ScalarProperty Name="staffName" ColumnName="staffName" />
+          <ScalarProperty Name="carReg" ColumnName="carReg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="inspections">
+      <EntityTypeMapping TypeName="Model.inspection">
+        <MappingFragment StoreEntitySet="inspection">
+          <ScalarProperty Name="propNo" ColumnName="propNo" />
+          <ScalarProperty Name="staffNo" ColumnName="staffNo" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="comments" ColumnName="comments" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
